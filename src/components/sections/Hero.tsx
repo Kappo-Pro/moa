@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import hero_video from "@/assets/moa/moa_hero_crop.mp4";
 import { ClientOnly } from "../ClientOnly";
 import { HeroScene } from "../three/HeroScene";
 
@@ -21,7 +22,7 @@ export function Hero() {
           playsInline
           className="w-screen h-full object-fill"
         >
-          <source src="/src/assets/moa/moa_hero_crop.mp4" type="video/mp4" />
+          <source src={hero_video} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-linear-to-b from-bg-deep/60 via-bg-deep/20 to-bg-deep" />
       </motion.div>
