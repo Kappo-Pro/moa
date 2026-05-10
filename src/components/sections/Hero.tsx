@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ClientOnly } from "../ClientOnly";
 import { HeroScene } from "../three/HeroScene";
-import heroMall from "@/assets/hero-mall.jpg";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { ClientOnly } from "../ClientOnly";
 import { VenueScene } from "../three/VenueScene";
-import sponsorshipImg from "@/assets/sponsorship.jpg";
 
 const opportunities = [
   { kpi: "1.2M", label: "Atrium impressions / month", note: "Naming rights on the Rotunda — the most filmed indoor space in Minnesota." },
@@ -116,7 +115,6 @@ export function SponsorshipSection() {
         </div>
 
 
-        <img src={sponsorshipImg} alt="" aria-hidden className="hidden" />
       </div>
     </section>
   );
