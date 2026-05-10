@@ -17,7 +17,7 @@ function ContactPage() {
       <SmoothScroll />
       <Nav />
       
-      <section className="relative min-h-[100svh] flex flex-col justify-center items-center px-8 md:px-16 overflow-hidden py-32">
+      <section className="relative min-h-svh flex flex-col justify-center items-center px-8 md:px-16 overflow-hidden py-32">
         <motion.div
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.25 }}
@@ -25,7 +25,7 @@ function ContactPage() {
           className="absolute inset-0"
         >
           <img src={moa_contact} alt="Contact MoA" className="size-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/80 via-bg-deep/40 to-bg-deep" />
+          <div className="absolute inset-0 bg-linear-to-b from-bg-deep/80 via-bg-deep/40 to-bg-deep" />
         </motion.div>
         
         <div className="relative z-10 max-w-4xl w-full text-center">

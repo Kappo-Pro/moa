@@ -26,7 +26,7 @@ function LeasingPage() {
           className="absolute inset-0"
         >
           <img src={moa_retail} alt="Retail at MoA" className="size-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-bg-deep/60 via-bg-deep/20 to-bg-deep" />
+          <div className="absolute inset-0 bg-linear-to-b from-bg-deep/60 via-bg-deep/20 to-bg-deep" />
         </motion.div>
         
         <div className="relative z-10">
@@ -69,7 +69,7 @@ function LeasingPage() {
             </div>
           </div>
         </div>
-        <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+        <div className="relative aspect-4/5 overflow-hidden rounded-sm">
           <img src={moa_luxury} alt="Luxury at MoA" className="size-full object-cover" />
         </div>
       </section>

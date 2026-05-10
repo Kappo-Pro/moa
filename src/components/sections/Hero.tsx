@@ -7,7 +7,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 export function Hero() {
   return (
-    <section id="hero" className="relative h-[100svh] w-full overflow-hidden noise">
+    <section id="hero" className="relative h-svh w-full overflow-hidden noise">
 
       <motion.div
         initial={{ scale: 1.18, opacity: 0 }}

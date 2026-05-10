@@ -13,12 +13,12 @@ export function SponsorshipSection() {
   return (
     <section id="sponsorship" className="relative py-32 md:py-48 px-8 md:px-16 noise overflow-hidden">
       {/* Backdrop */}
-      <div className="absolute inset-0 -z-0 opacity-80">
+      <div className="absolute inset-0 z-0 opacity-80">
         <ClientOnly>
           <VenueScene />
         </ClientOnly>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-deep via-bg-deep/40 to-bg-deep -z-0" />
+      <div className="absolute inset-0 bg-linear-to-b from-bg-deep via-bg-deep/40 to-bg-deep z-0" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.p

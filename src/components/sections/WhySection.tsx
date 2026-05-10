@@ -43,7 +43,7 @@ export function WhySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-20%" }}
           transition={{ duration: 1.2 }}
-          className="font-display text-5xl md:text-7xl leading-[1] tracking-tight max-w-4xl text-balance"
+          className="font-display text-5xl md:text-7xl leading-none tracking-tight max-w-4xl text-balance"
         >
           A nation arrives,<br />
           <span className="italic text-foreground/70">every single day.</span>
