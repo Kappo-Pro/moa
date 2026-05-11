@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import hero_video from "@/assets/moa/moa_hero_crop.mp4";
+import hero_video from "@/assets/moa/moa_hero_crop2.mp4";
 import { ClientOnly } from "../ClientOnly";
 import { HeroScene } from "../three/HeroScene";
 
