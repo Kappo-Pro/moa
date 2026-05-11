@@ -1,7 +1,6 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
-import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 function StageBeams() {
   const group = useRef<THREE.Group>(null);

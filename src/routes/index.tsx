@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SmoothScroll } from "@/components/SmoothScroll";
-import { AmbientAudio } from "@/components/AmbientAudio";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/sections/Hero";
-import { WhySection } from "@/components/sections/WhySection";
-import { ShowcaseSection } from "@/components/sections/ShowcaseSection";
-import { SponsorshipSection } from "@/components/sections/SponsorshipSection";
+import { SmoothScroll } from "../components/SmoothScroll";
+import { AmbientAudio } from "../components/AmbientAudio";
+import { Nav } from "../components/Nav";
+import { Footer } from "../components/Footer";
+import { Hero } from "../components/sections/Hero";
+import { WhySection } from "../components/sections/WhySection";
+import { ShowcaseSection } from "../components/sections/ShowcaseSection";
+import { SponsorshipSection } from "../components/sections/SponsorshipSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({

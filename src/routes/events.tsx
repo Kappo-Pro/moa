@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
-import { SmoothScroll } from "@/components/SmoothScroll";
+import { Nav } from "../components/Nav";
+import { Footer } from "../components/Footer";
+import { SmoothScroll } from "../components/SmoothScroll";
 import moa_events from "@/assets/moa/moa14.jpg";
 import moa_waterpark from "@/assets/moa/moa11.jpg";
 

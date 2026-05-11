@@ -1,38 +1,73 @@
-# Mall of America — Interactive Sales Experience
+# React + TypeScript + Vite
 
-An immersive, cinematic web experience designed for retail, luxury, and sponsorship partners of the Mall of America.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Tech Stack
+Currently, two official plugins are available:
 
-- **Framework:** [TanStack Start](https://tanstack.com/start)
-- **Styling:** Tailwind CSS 4.0
-- **Animations:** Framer Motion & GSAP
-- **3D Elements:** React Three Fiber (Three.js)
-- **Deployment:** Cloudflare Pages
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Getting Started
+## React Compiler
 
-1. Clone the repository.
-2. Install dependencies:
-   ```bash
-   bun install
-   ```
-3. Start the development server:
-   ```bash
-   bun dev
-   ```
-4. Build for production:
-   ```bash
-   bun build
-   ```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Project Structure
+## Expanding the ESLint configuration
 
-- `src/components`: UI components and page sections.
-- `src/routes`: Application routes using TanStack Router.
-- `src/styles.css`: Global styles and design system tokens.
-- `src/assets`: Static assets and media.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## License
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-Private / Confidential. All rights reserved.
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

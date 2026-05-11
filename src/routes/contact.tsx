@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
-import { SmoothScroll } from "@/components/SmoothScroll";
+import { Nav } from "../components/Nav";
+import { Footer } from "../components/Footer";
+import { SmoothScroll } from "../components/SmoothScroll";
 import moa_contact from "@/assets/moa/moa10.jpg";
 
 export const Route = createFileRoute("/contact")({

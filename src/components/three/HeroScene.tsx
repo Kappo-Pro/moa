@@ -1,7 +1,6 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
-import { EffectComposer, Bloom, Vignette } from "@react-three/postprocessing";
 
 function ParticleField({ count = 500 }: { count?: number }) {
   const ref = useRef<THREE.Points>(null);
@@ -92,7 +91,7 @@ export function HeroScene() {
       <color attach="background" args={["#0a0c11"]} />
       <fog attach="fog" args={["#0a0c11", 6, 18]} />
       <ambientLight intensity={0.4} />
-      {/* <AuroraRibbons /> */}
+      <AuroraRibbons />
       <ParticleField />
       <CameraSway />
 
