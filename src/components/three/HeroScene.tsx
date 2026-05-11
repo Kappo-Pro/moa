@@ -43,33 +43,33 @@ function ParticleField({ count = 500 }: { count?: number }) {
   );
 }
 
-function AuroraRibbons() {
-  const g1 = useRef<THREE.Mesh>(null);
-  const g2 = useRef<THREE.Mesh>(null);
-  useFrame((s) => {
-    const t = s.clock.elapsedTime;
-    if (g1.current) {
-      g1.current.rotation.z = t * 0.05;
-      g1.current.position.x = Math.sin(t * 0.2) * 1.5;
-    }
-    if (g2.current) {
-      g2.current.rotation.z = -t * 0.04;
-      g2.current.position.x = Math.cos(t * 0.18) * 1.2;
-    }
-  });
-  return (
-    <>
-      <mesh ref={g1} position={[0, 0, -3]}>
-        <planeGeometry args={[18, 6, 1, 1]} />
-        <meshBasicMaterial color="#1ca7a7" transparent opacity={0.18} blending={THREE.AdditiveBlending} depthWrite={false} />
-      </mesh>
-      <mesh ref={g2} position={[2, -1, -2]}>
-        <planeGeometry args={[14, 4, 1, 1]} />
-        <meshBasicMaterial color="#d49a3a" transparent opacity={0.14} blending={THREE.AdditiveBlending} depthWrite={false} />
-      </mesh>
-    </>
-  );
-}
+// function AuroraRibbons() {
+//   const g1 = useRef<THREE.Mesh>(null);
+//   const g2 = useRef<THREE.Mesh>(null);
+//   useFrame((s) => {
+//     const t = s.clock.elapsedTime;
+//     if (g1.current) {
+//       g1.current.rotation.z = t * 0.05;
+//       g1.current.position.x = Math.sin(t * 0.2) * 1.5;
+//     }
+//     if (g2.current) {
+//       g2.current.rotation.z = -t * 0.04;
+//       g2.current.position.x = Math.cos(t * 0.18) * 1.2;
+//     }
+//   });
+//   return (
+//     <>
+//       <mesh ref={g1} position={[0, 0, -3]}>
+//         <planeGeometry args={[18, 6, 1, 1]} />
+//         <meshBasicMaterial color="#1ca7a7" transparent opacity={0.18} blending={THREE.AdditiveBlending} depthWrite={false} />
+//       </mesh>
+//       <mesh ref={g2} position={[2, -1, -2]}>
+//         <planeGeometry args={[14, 4, 1, 1]} />
+//         <meshBasicMaterial color="#d49a3a" transparent opacity={0.14} blending={THREE.AdditiveBlending} depthWrite={false} />
+//       </mesh>
+//     </>
+//   );
+// }
 
 function CameraSway() {
   useFrame((state) => {
