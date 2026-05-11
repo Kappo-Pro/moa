@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { SmoothScroll } from "../components/SmoothScroll";
 import moa_retail from "@/assets/moa/moa4.jpg";
 import moa_luxury from "@/assets/moa/moa8.jpg";
+import { AIToolsSection } from "../components/AITools";
 
 export const Route = createFileRoute("/leasing")({
   component: LeasingPage,
@@ -99,6 +100,8 @@ function LeasingPage() {
           </div>
         </div>
       </section>
+
+      <AIToolsSection />
 
       <Footer />
     </main>

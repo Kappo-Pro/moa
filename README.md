@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Mall of America — Interactive Sales Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, cinematic B2B platform designed for Mall of America's leasing, sponsorship, and partnership teams. This experience transforms statistics into a visionary journey for global brands.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework**: React 19 + Vite 8
+- **Styling**: Tailwind CSS 4 (using the new JIT engine)
+- **Animations**: Framer Motion 12 (for cinematic transitions and micro-interactions)
+- **Routing**: TanStack Router
+- **3D Visuals**: React Three Fiber + Three.js
+- **AI Core**: Google Gemini 3 flash preview via the `@google/generative-ai` SDK
+- **Data Fetching**: TanStack Query
 
-## React Compiler
+## AI-Powered Tools
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To enhance the B2B sales experience, we've integrated specialized AI tools:
 
-## Expanding the ESLint configuration
+1. **The MoA Visionary (AI Concierge)**
+   - **Purpose**: A 24/7 luxury partnership consultant that provides instant answers about leasing, traffic, and demographics.
+   - **Context**: Primed with MoA's specific data (40M+ annual guests, 5.6M sq ft) to act as a subject matter expert.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Smart Brand Matcher**
+   - **Purpose**: Helps potential lessees identify their ideal location.
+   - **Mechanism**: Analyzes brand descriptions and categorizes them into one of MoA's three "Theatres": Retail, Lifestyle & Dining, or Entertainment.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. **Dynamic ROI Predictor**
+   - **Purpose**: Provides data-driven impact statements for potential partners.
+   - **Mechanism**: Generates visionary ROI predictions based on business category and scale, leveraging MoA's massive foot traffic data.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Design Decisions
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Cinematic Aesthetic**: We prioritized a "premium" feel using glassmorphism, subtle grain overlays, and a sophisticated color palette (OKLCH color space for vibrant dark modes).
+- **Typography**: Paired the elegant **Fraunces** serif for headings with the functional **Inter** sans-serif for a high-end editorial look.
+- **Micro-Animations**: Used smooth, non-intrusive animations (staggered entries, floating elements) to keep the experience feeling "alive" and interactive.
+- **Asset Optimization**: Implemented high-performance GL power preferences for 3D particle fields and optimized video backgrounds for smooth playback across devices.
+
+## 🛠️ Setup Instructions
+
+### 1. Prerequisites
+- Node.js 20+
+- A Google Gemini API Key (get one at [Google AI Studio](https://aistudio.google.com/))
+
+### 2. Installation
+```bash
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Environment Variables
+Create a `.env` file in the root directory and add your API key:
+```env
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
 ```
+
+### 4. Run Locally
+```bash
+npm run dev
+```
+
+## Project Structure
+- `/src/components`: Core UI components and AI-driven tools.
+- `/src/components/three`: React Three Fiber scenes.
+- `/src/lib/gemini.ts`: AI service layer for Gemini API integration.
+- `/src/routes`: File-based routing with TanStack Router.
+- `/src/styles.css`: Global styles and Tailwind configuration.

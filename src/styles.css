@@ -180,7 +180,6 @@
     pointer-events: none;
     z-index: 100;
     opacity: 0.04;
-    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
     animation: grain 8s steps(10) infinite;
   }
 
